@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% comment %} {% extends "base.html" %} {% endcomment %}
+{%load static%}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+  </head>
+  <body>
+  {%block 'content' %}
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Login</header>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{form.username}}
+            {{form.password}}
+            <a href="#">Forgot password?</a>
+            <input type="submit" value="Login" />
+        </form>
+      </div>
+    </section>
+  {% endblock %}
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
